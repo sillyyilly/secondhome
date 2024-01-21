@@ -17,7 +17,7 @@ export default function App() {
 				</svg>
 				<div className="text-5xl font-extrabold mt-0">Second Home</div>
 				<div className="mt-2 text-lg font-light italic">Your life, mapped</div>
-				<input type="text" className="border-gray-500 border-2 rounded-md py-2 px-10 text-center mt-6" placeholder="Enter your Map Key" ></input>
+				<input type="text" className="border-gray-500 border-2 rounded-md py-2 px-10 text-center mt-6" placeholder="65ac3a16ca641a9a1399dc24" ></input>
 				<Button className="mt-4" onClick={() => setMapHidden(false)}>Explore</Button>
 			</div>
 
