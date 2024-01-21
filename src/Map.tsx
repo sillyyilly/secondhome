@@ -14,9 +14,8 @@ const options: TGetVenueMakerOptions = {
 export default function Map() {
 	// See Trial API key Terms and Conditions
 	// https://developer.mappedin.com/api-keys
-	const mapRef = useRef<HTMLDivElement | null>(null);
 	const venue: Mappedin | undefined = useVenue(options);
-	useMapView(mapRef.current, venue);
+	const { elementRef } = useMapView(venue);
 
-	return <div ref={mapRef} />;
+	return <div ref={elementRef} />;
 }
