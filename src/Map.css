@@ -40,29 +40,3 @@
 .read-the-docs {
   color: #888;
 }
-
-.map-container {
-  /* Ensure the map container takes full width and height */
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.map-popup {
-  /* Style for the popup */
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-  /* Positioning in the middle of the map container */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  /* Optional: Limit the size of the popup and allow for scrolling */
-  max-height: 80%;
-  max-width: 80%;
-  overflow: auto;
-}
