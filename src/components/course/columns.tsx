@@ -21,7 +21,7 @@ export type CourseItem = {
 	completed: boolean;
 }
 
-const categories = ["Assigmnent", "Quiz", "Exam", "Project", "Other"];
+const categories = ["Assignment", "Quiz", "Exam", "Project", "Other"];
 
 export const columns: ColumnDef<CourseItem>[] = [
 	{
@@ -33,7 +33,7 @@ export const columns: ColumnDef<CourseItem>[] = [
 		header: "Category",
 		cell: ({ row }) => {
 			return (
-				<Select>
+				<Select defaultValue={row.getValue("category")} >
 					<SelectTrigger className="w-[180px]">
 						<SelectValue placeholder="Category" />
 					</SelectTrigger>
@@ -57,8 +57,8 @@ export const columns: ColumnDef<CourseItem>[] = [
 		header: "Complete",
 		cell: ({ row }) => {
 			return <Checkbox 
-				checked={row.getIsSelected()}
-				id={row.id}
+				defaultChecked={row.getValue("completed")}
+				key={row.id + row.getValue("name")}
 				onCheckedChange={(value) => row.toggleSelected(!!value)}
 			/>
 		}
