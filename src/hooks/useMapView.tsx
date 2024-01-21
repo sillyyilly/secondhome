@@ -41,13 +41,13 @@ export default function useMapView(
         const getColor = (id: string) => {
           switch (id) {
             case "CPSC 310":
-              return "#06c4e5";
+              return "#293034";
             case "CPSC 330":
-              return "#e506da";
+              return "#FF6130";
             case "CPSC 340":
-              return "#fd3732";
+              return "#007484";
             case "CPSC 313":
-              return "#0df54f";
+              return "#821E1E";
             default:
               return "#646464";
           }
