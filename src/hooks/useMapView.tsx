@@ -20,6 +20,7 @@ export default function useMapView(
   const [mapView, setMapView] = useState<MapView | undefined>();
   const [popupVisible, setPopupVisible] = useState(false);
   const [popupPosition, setPopupPosition] = useState<PopupPosition>({ x: 0, y: 0 });
+  const [selectedRoom, setSelectedRoom] = useState("");
 
   useEffect(() => {
     async function renderVenue() {
@@ -61,6 +62,7 @@ export default function useMapView(
             _mapView.setPolygonColor(polygons[0], getColor(polygons[0].externalId));
             setPopupPosition({ x, y });
             setPopupVisible(true);
+			setSelectedRoom(polygons[0].externalId);
           } else {
             setPopupVisible(false);
           }
@@ -84,5 +86,5 @@ export default function useMapView(
     };
   }, [el, venue, options, mapView]);
 
-  return { mapView, popupVisible, popupPosition };
+  return { mapView, popupVisible, popupPosition, selectedRoom };
 }
