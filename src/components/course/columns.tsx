@@ -16,8 +16,9 @@ import "../../../app/globals.css"
 export type CourseItem = {
 	name: string;
 	category: string;
-	date: Date;
-	complete: boolean;
+	// due_date: Date;
+	due_date: string;
+	completed: boolean;
 }
 
 const categories = ["Assigmnent", "Quiz", "Exam", "Project", "Other"];
@@ -44,18 +45,17 @@ export const columns: ColumnDef<CourseItem>[] = [
 		}
 	},
 	{
-		accessorKey: "date",
+		accessorKey: "due_date",
 		header: "Date",
 		cell: ({ row }) => {
-			const dt: Date = row.getValue("date");
-			return dt.toLocaleDateString();
+			const date: string = row.getValue("due_date");
+			return new Date(date).toLocaleDateString();
 		}
 	},
 	{
-		accessorKey: "complete",
+		accessorKey: "completed",
 		header: "Complete",
 		cell: ({ row }) => {
-			const complete: boolean = row.getValue("complete");
 			return <Checkbox 
 				checked={row.getIsSelected()}
 				id={row.id}
