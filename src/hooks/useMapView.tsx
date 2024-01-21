@@ -5,15 +5,7 @@ import {
 	showVenue,
 	TShowVenueOptions
 } from "@mappedin/mappedin-js";
-// import {
-// 	Select,
-// 	SelectContent,
-// 	SelectItem,
-// 	SelectTrigger,
-// 	SelectValue,
-// } from "@/components/ui/select"
 import { useEffect, useState } from "react";
-import {MappedinPolygon} from "@mappedin/mappedin-js/get-venue/MappedinPolygon";
 
 export default function useMapView(
 	el: HTMLElement | null,
@@ -21,7 +13,6 @@ export default function useMapView(
 	options?: TShowVenueOptions
 ) {
 	const [mapView, setMapView] = useState<MapView | undefined>();
-	const [currRoom, setRoom] = useState("");
 
 	useEffect(() => {
 		async function renderVenue() {
