@@ -1,33 +1,29 @@
-import "@mappedin/mappedin-js/lib/mappedin.css";
+import "./App.css"
 import Map from "./Map";
 import "../app/globals.css";
+import { useState } from "react";
+import { Button } from "./components/ui/button";
 
-import {
-	Dialog,
-	DialogTrigger,
-	DialogContent,
-	DialogHeader,
-	DialogTitle,
-	DialogDescription,
-} from './components/ui/dialog'
+
 
 export default function App() {
+	const [ mapHidden, setMapHidden ] = useState(true);
 
 	return (
 		<div id="app">
-			<Dialog>
-				<DialogTrigger>Open</DialogTrigger>
-				<DialogContent>
-					<DialogHeader>
-						<DialogTitle>Are you absolutely sure?</DialogTitle>
-						<DialogDescription>
-							This action cannot be undone. This will permanently delete your account
-							and remove your data from our servers.
-						</DialogDescription>
-					</DialogHeader>
-				</DialogContent>
-			</Dialog>
-			<Map />
+			<div id="intro" className={ "flex flex-col items-center" + (mapHidden ? "" : " hidden") }>
+				<div className="text-5xl font-extrabold">Second Home</div>
+				<div className="mt-2 text-lg font-light italic">Your life, mapped</div>
+				<input type="text" className="border-gray-500 border-2 rounded-md py-2 px-10 text-center mt-6" placeholder="Enter your Map Key" ></input>
+				<Button className="mt-4" onClick={() => setMapHidden(false)}>Explore</Button>
+			</div>
+
+			<div id="mapDiv" className={ mapHidden ? "opacity-0" : "opacity-100"}>
+				<Map />
+			</div>
 		</div>
 	);
 }
+// <div id="mapDiv" className={ mapHidden ? "opacity-0" : "opacity-100"}>
+// 	<Map />
+// </div>
