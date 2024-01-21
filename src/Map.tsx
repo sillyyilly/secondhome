@@ -3,21 +3,30 @@ import "@mappedin/mappedin-js/lib/mappedin.css";
 import "./Map.css";
 import useMapView from "./hooks/useMapView";
 import useVenue from "./hooks/useVenue";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 const options: TGetVenueMakerOptions = {
-	mapId: "65ac3a16ca641a9a1399dc24",
-	key: import.meta.env.VITE_MI_CLIENT_ID,
-	secret: import.meta.env.VITE_MI_CLIENT_SECRET,
+  mapId: "65ac3a16ca641a9a1399dc24",
+  key: import.meta.env.VITE_MI_CLIENT_ID,
+  secret: import.meta.env.VITE_MI_CLIENT_SECRET,
 };
 
-
 export default function Map() {
-	// See Trial API key Terms and Conditions
-	// https://developer.mappedin.com/api-keys
-	const mapRef = useRef<HTMLDivElement|null>(null);
-	const venue: Mappedin | undefined = useVenue(options);
-	const mapView = useMapView(mapRef.current, venue);
+  const mapRef = useRef<HTMLDivElement|null>(null);
+  const venue: Mappedin | undefined = useVenue(options);
+  const { mapView, popupVisible, popupPosition } = useMapView(mapRef.current, venue);
 
-	return <div ref={mapRef} />;
+  return (
+    <div>
+      <div ref={mapRef} className="map-container" />
+      {popupVisible && (
+        <div 
+          className="map-popup" 
+          style={{ position: 'absolute', left: popupPosition.x, top: popupPosition.y }}
+        >
+          Hello World
+        </div>
+      )}
+    </div>
+  );
 }
