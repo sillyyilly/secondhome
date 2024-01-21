@@ -3,7 +3,7 @@ import "@mappedin/mappedin-js/lib/mappedin.css";
 import "./Map.css";
 import useMapView from "./hooks/useMapView";
 import useVenue from "./hooks/useVenue";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 const options: TGetVenueMakerOptions = {
 	mapId: "65ac3a16ca641a9a1399dc24",
@@ -18,6 +18,7 @@ export default function Map() {
 	const mapRef = useRef<HTMLDivElement|null>(null);
 	const venue: Mappedin | undefined = useVenue(options);
 	const mapView = useMapView(mapRef.current, venue);
+	mapView;
 
 	return <div ref={mapRef} />;
 }
