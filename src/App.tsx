@@ -1,37 +1,24 @@
-
-import { Mappedin, TGetVenueMakerOptions } from "@mappedin/mappedin-js";
-import "@mappedin/mappedin-js/lib/mappedin.css";
-import useMapView from "./hooks/useMapView";
-import useVenue from "./hooks/useVenue";
+import "./App.css"
 import Map from "./Map";
 import "../app/globals.css";
-
-import {
-	Dialog,
-	DialogTrigger,
-	DialogContent,
-	DialogHeader,
-	DialogTitle,
-	DialogDescription,
-} from './components/ui/dialog'
+import { useState } from "react";
+import { Button } from "./components/ui/button";
 
 export default function App() {
+	const [ mapHidden, setMapHidden ] = useState(true);
 
 	return (
 		<div id="app">
-			<Dialog>
-				<DialogTrigger>Open</DialogTrigger>
-				<DialogContent>
-					<DialogHeader>
-						<DialogTitle>Are you absolutely sure?</DialogTitle>
-						<DialogDescription>
-							This action cannot be undone. This will permanently delete your account
-							and remove your data from our servers.
-						</DialogDescription>
-					</DialogHeader>
-				</DialogContent>
-			</Dialog>
+			<div id="intro">
+				<div className="text-5xl font-extrabold">Second Home</div>
+				<div className="mt-2 text-lg font-light italic">Your life, mapped</div>
+				<Button className="mt-8" onClick={() => setMapHidden(false)}>Explore</Button>
+			</div>
+
 			<Map />
 		</div>
 	);
 }
+// <div id="mapDiv" className={ mapHidden ? "opacity-0" : "opacity-100"}>
+// 	<Map />
+// </div>
