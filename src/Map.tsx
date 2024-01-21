@@ -17,13 +17,13 @@ const getCourseData = (id: string) => {
 		case "CPSC 330":
 			return [
 				{
-					"name": "Assignment 1",
+					"name": "Assignment 1: Intro to Machine Learning",
 					"category": "Assignment",
 					"due_date": "2024-02-01T00:00:00.000Z",
 					"completed": false
 				},
 				{
-					"name": "Quiz 1",
+					"name": "Quiz 1: Intro",
 					"category": "Quiz",
 					"due_date": "2024-02-10T00:00:00.000Z",
 					"completed": false
@@ -35,31 +35,31 @@ const getCourseData = (id: string) => {
 					"completed": false
 				},
 				{
-					"name": "Assignment 2",
+					"name": "Assignment 2: Linear Regression",
 					"category": "Assignment",
 					"due_date": "2024-04-05T00:00:00.000Z",
 					"completed": false
 				},
 				{
-					"name": "Quiz 2",
+					"name": "Quiz 2: Linear Regression",
 					"category": "Quiz",
 					"due_date": "2024-04-15T00:00:00.000Z",
 					"completed": false
 				},
 				{
-					"name": "Final Exam",
+					"name": "Midterm Exam 2",
 					"category": "Exam",
 					"due_date": "2024-05-20T00:00:00.000Z",
 					"completed": false
 				},
 				{
-					"name": "Assignment 3",
+					"name": "Assignment 3: Scikit Learn",
 					"category": "Assignment",
 					"due_date": "2024-06-01T00:00:00.000Z",
 					"completed": false
 				},
 				{
-					"name": "Quiz 3",
+					"name": "Quiz 3: Scikit Learn",
 					"category": "Quiz",
 					"due_date": "2024-06-10T00:00:00.000Z",
 					"completed": false
@@ -74,7 +74,7 @@ const getCourseData = (id: string) => {
 					"completed": false
 				},
 				{
-					"name": "Quiz 2",
+					"name": "Quiz 2: Matrix Algebra",
 					"category": "Quiz",
 					"due_date": "2024-02-15T00:00:00.000Z",
 					"completed": false
@@ -86,31 +86,31 @@ const getCourseData = (id: string) => {
 					"completed": false
 				},
 				{
-					"name": "Assignment 2",
+					"name": "Assignment 2: Neural Networks",
 					"category": "Assignment",
 					"due_date": "2024-04-10T00:00:00.000Z",
 					"completed": false
 				},
 				{
-					"name": "Quiz 3",
+					"name": "Quiz 3: Linear Regression",
 					"category": "Quiz",
 					"due_date": "2024-04-25T00:00:00.000Z",
 					"completed": false
 				},
 				{
-					"name": "Final Exam",
+					"name": "Midterm Exam 2",
 					"category": "Exam",
 					"due_date": "2024-05-30T00:00:00.000Z",
 					"completed": false
 				},
 				{
-					"name": "Assignment 3",
+					"name": "Assignment 3: Linear Regression",
 					"category": "Assignment",
 					"due_date": "2024-06-15T00:00:00.000Z",
 					"completed": false
 				},
 				{
-					"name": "Quiz 4",
+					"name": "Quiz 4: Neural Networks (cont.)",
 					"category": "Quiz",
 					"due_date": "2024-06-30T00:00:00.000Z",
 					"completed": false
@@ -140,49 +140,49 @@ const getCourseData = (id: string) => {
 		case "CPSC 313":
 			return [
 				{
-					"name": "Homework 1",
+					"name": "Assignment 1: Intro to C",
 					"category": "Assignment",
 					"due_date": "2024-02-05T00:00:00.000Z",
 					"completed": false
 				},
 				{
-					"name": "Quiz 1",
+					"name": "Quiz 1: Intro to C",
 					"category": "Quiz",
 					"due_date": "2024-02-12T00:00:00.000Z",
 					"completed": false
 				},
 				{
-					"name": "Midterm Exam",
+					"name": "Midterm 1 Exam",
 					"category": "Exam",
 					"due_date": "2024-03-18T00:00:00.000Z",
 					"completed": false
 				},
 				{
-					"name": "Homework 2",
+					"name": "Assignment 2: Assembly",
 					"category": "Assignment",
 					"due_date": "2024-04-10T00:00:00.000Z",
 					"completed": false
 				},
 				{
-					"name": "Quiz 2",
+					"name": "Quiz 2: Assembly",
 					"category": "Quiz",
 					"due_date": "2024-04-15T00:00:00.000Z",
 					"completed": false
 				},
 				{
-					"name": "Final Exam",
+					"name": "Midterm 2 Exam",
 					"category": "Exam",
 					"due_date": "2024-05-25T00:00:00.000Z",
 					"completed": false
 				},
 				{
-					"name": "Homework 3",
+					"name": "Assignment 3: Virtual Memory",
 					"category": "Assignment",
 					"due_date": "2024-06-05T00:00:00.000Z",
 					"completed": false
 				},
 				{
-					"name": "Quiz 3",
+					"name": "Quiz 3: Virtual Memory",
 					"category": "Quiz",
 					"due_date": "2024-06-12T00:00:00.000Z",
 					"completed": false
