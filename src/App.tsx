@@ -9,13 +9,15 @@ export default function App() {
 
 	return (
 		<div id="app">
-			<div id="intro">
+			<div id="intro" className={ mapHidden ? "" : "hidden" }>
 				<div className="text-5xl font-extrabold">Second Home</div>
 				<div className="mt-2 text-lg font-light italic">Your life, mapped</div>
 				<Button className="mt-8" onClick={() => setMapHidden(false)}>Explore</Button>
 			</div>
 
-			<Map />
+			<div id="mapDiv" className={ mapHidden ? "opacity-0" : "opacity-100"}>
+				<Map />
+			</div>
 		</div>
 	);
 }
