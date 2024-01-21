@@ -5,7 +5,6 @@ import useMapView from "./hooks/useMapView";
 import useVenue from "./hooks/useVenue";
 import Map from "./Map";
 import "../app/globals.css";
-import * as data from './data.json';
 
 import {
 	Dialog,
@@ -16,14 +15,7 @@ import {
 	DialogDescription,
 } from './components/ui/dialog'
 
-const options: TGetVenueMakerOptions = {
-	mapId: "65ac3a16ca641a9a1399dc24",
-	key: import.meta.env.VITE_MI_CLIENT_ID,
-	secret: import.meta.env.VITE_MI_CLIENT_SECRET,
-};
-
 export default function App() {
-	console.log(data.stuff);
 
 	return (
 		<div id="app">
