@@ -4,7 +4,7 @@ import "./Map.css";
 import useMapView from "./hooks/useMapView";
 import useVenue from "./hooks/useVenue";
 import { useRef, useState } from "react";
-import Popup from "./Popup";
+import Popup from 'reactjs-popup';
 
 const options: TGetVenueMakerOptions = {
 	mapId: "65ac3a16ca641a9a1399dc24",
@@ -35,9 +35,10 @@ export default function Map() {
 	if (mapView) {
 		mapView.on(E_SDK_EVENT.CLICK, ({ polygons }) => {
 			mapView.clearAllPolygonColors();
+			setRoom("");
 			if (polygons.length > 0 && polygons[0].externalId) {
 				mapView.setPolygonColor(polygons[0], getColor(polygons[0].externalId));
-				setRoom(polygons[0].id);
+				setRoom(polygons[0].externalId);
 			}
 		});
 	}
@@ -47,11 +48,17 @@ export default function Map() {
 	// conditionally render popup based on state
 	// new file to render popup content - react props
 
+	const Modal = (room) => (
+		<Popup trigger={undefined} modal>
+			<span> Showing room: </span>
+		</Popup>
+	);
+
 	return (
 		<div id="map">
 			<div ref={mapRef} />
 			<div id="popupDiv">
-				<Popup />
+				<Modal room={room} />
 			</div>
 		</div>
 	);
