@@ -1,8 +1,4 @@
-
-import { Mappedin, TGetVenueMakerOptions } from "@mappedin/mappedin-js";
 import "@mappedin/mappedin-js/lib/mappedin.css";
-import useMapView from "./hooks/useMapView";
-import useVenue from "./hooks/useVenue";
 import Map from "./Map";
 import "../app/globals.css";
 

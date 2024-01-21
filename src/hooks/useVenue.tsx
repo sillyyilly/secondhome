@@ -1,4 +1,4 @@
-import { Mappedin, TGetVenueMakerOptions, TGetVenueOptions, getVenue, getVenueMaker } from "@mappedin/mappedin-js";
+import { Mappedin, TGetVenueMakerOptions, getVenueMaker } from "@mappedin/mappedin-js";
 import { useEffect, useState } from "react";
 
 export default function useVenue(options: TGetVenueMakerOptions) {
