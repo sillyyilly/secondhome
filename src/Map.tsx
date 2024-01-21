@@ -18,49 +18,49 @@ const getCourseData = (id: string) => {
 			return [
 				{
 					"name": "Assignment 1",
-					"category": "assignments",
+					"category": "Assignment",
 					"due_date": "2024-02-01T00:00:00.000Z",
 					"completed": false
 				},
 				{
 					"name": "Quiz 1",
-					"category": "quizzes",
+					"category": "Quiz",
 					"due_date": "2024-02-10T00:00:00.000Z",
-					"completed": true
+					"completed": false
 				},
 				{
 					"name": "Midterm Exam",
-					"category": "exams",
+					"category": "Exam",
 					"due_date": "2024-03-15T00:00:00.000Z",
 					"completed": false
 				},
 				{
 					"name": "Assignment 2",
-					"category": "assignments",
+					"category": "Assignment",
 					"due_date": "2024-04-05T00:00:00.000Z",
 					"completed": false
 				},
 				{
 					"name": "Quiz 2",
-					"category": "quizzes",
+					"category": "Quiz",
 					"due_date": "2024-04-15T00:00:00.000Z",
 					"completed": false
 				},
 				{
 					"name": "Final Exam",
-					"category": "exams",
+					"category": "Exam",
 					"due_date": "2024-05-20T00:00:00.000Z",
 					"completed": false
 				},
 				{
 					"name": "Assignment 3",
-					"category": "assignments",
+					"category": "Assignment",
 					"due_date": "2024-06-01T00:00:00.000Z",
 					"completed": false
 				},
 				{
 					"name": "Quiz 3",
-					"category": "quizzes",
+					"category": "Quiz",
 					"due_date": "2024-06-10T00:00:00.000Z",
 					"completed": false
 				}
@@ -69,49 +69,49 @@ const getCourseData = (id: string) => {
 			return [
 				{
 					"name": "Project Proposal",
-					"category": "assignments",
+					"category": "Assignment",
 					"due_date": "2024-01-25T00:00:00.000Z",
-					"completed": true
+					"completed": false
 				},
 				{
 					"name": "Quiz 2",
-					"category": "quizzes",
+					"category": "Quiz",
 					"due_date": "2024-02-15T00:00:00.000Z",
 					"completed": false
 				},
 				{
 					"name": "Midterm Exam",
-					"category": "exams",
+					"category": "Exam",
 					"due_date": "2024-03-20T00:00:00.000Z",
 					"completed": false
 				},
 				{
 					"name": "Assignment 2",
-					"category": "assignments",
+					"category": "Assignment",
 					"due_date": "2024-04-10T00:00:00.000Z",
 					"completed": false
 				},
 				{
 					"name": "Quiz 3",
-					"category": "quizzes",
+					"category": "Quiz",
 					"due_date": "2024-04-25T00:00:00.000Z",
 					"completed": false
 				},
 				{
 					"name": "Final Exam",
-					"category": "exams",
+					"category": "Exam",
 					"due_date": "2024-05-30T00:00:00.000Z",
 					"completed": false
 				},
 				{
 					"name": "Assignment 3",
-					"category": "assignments",
+					"category": "Assignment",
 					"due_date": "2024-06-15T00:00:00.000Z",
 					"completed": false
 				},
 				{
 					"name": "Quiz 4",
-					"category": "quizzes",
+					"category": "Quiz",
 					"due_date": "2024-06-30T00:00:00.000Z",
 					"completed": false
 				}
@@ -120,19 +120,19 @@ const getCourseData = (id: string) => {
 			return [
 				{
 					"name": "Assignment 2",
-					"category": "assignments",
+					"category": "Assignment",
 					"due_date": "2024-02-08T00:00:00.000Z",
 					"completed": false
 				},
 				{
 					"name": "Quiz 1",
-					"category": "quizzes",
+					"category": "Quiz",
 					"due_date": "2024-02-15T00:00:00.000Z",
 					"completed": false
 				},
 				{
 					"name": "Midterm Exam",
-					"category": "exams",
+					"category": "Exam",
 					"due_date": "2024-03-22T00:00:00.000Z",
 					"completed": false
 				}
@@ -141,49 +141,49 @@ const getCourseData = (id: string) => {
 			return [
 				{
 					"name": "Homework 1",
-					"category": "assignments",
+					"category": "Assignment",
 					"due_date": "2024-02-05T00:00:00.000Z",
-					"completed": true
+					"completed": false
 				},
 				{
 					"name": "Quiz 1",
-					"category": "quizzes",
+					"category": "Quiz",
 					"due_date": "2024-02-12T00:00:00.000Z",
-					"completed": true
+					"completed": false
 				},
 				{
 					"name": "Midterm Exam",
-					"category": "exams",
+					"category": "Exam",
 					"due_date": "2024-03-18T00:00:00.000Z",
 					"completed": false
 				},
 				{
 					"name": "Homework 2",
-					"category": "assignments",
+					"category": "Assignment",
 					"due_date": "2024-04-10T00:00:00.000Z",
 					"completed": false
 				},
 				{
 					"name": "Quiz 2",
-					"category": "quizzes",
+					"category": "Quiz",
 					"due_date": "2024-04-15T00:00:00.000Z",
 					"completed": false
 				},
 				{
 					"name": "Final Exam",
-					"category": "exams",
+					"category": "Exam",
 					"due_date": "2024-05-25T00:00:00.000Z",
 					"completed": false
 				},
 				{
 					"name": "Homework 3",
-					"category": "assignments",
+					"category": "Assignment",
 					"due_date": "2024-06-05T00:00:00.000Z",
 					"completed": false
 				},
 				{
 					"name": "Quiz 3",
-					"category": "quizzes",
+					"category": "Quiz",
 					"due_date": "2024-06-12T00:00:00.000Z",
 					"completed": false
 				}
@@ -210,7 +210,7 @@ export default function Map() {
       ) : (
         <div
             className={"map-popup fadeOut"}>
-          <CourseTable id={selectedRoom} courseDataProp={getCourseData(selectedRoom)} />
+          <CourseTable id={selectedRoom} key={selectedRoom} courseDataProp={getCourseData(selectedRoom)} />
         </div>
       )}
     </div>
