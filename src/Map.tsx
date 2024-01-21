@@ -199,17 +199,20 @@ export default function Map() {
 	const venue: Mappedin | undefined = useVenue(options);
 	const { mapView, popupVisible, popupPosition, selectedRoom } = useMapView(mapRef.current, venue);
 
-	return (
-		<div>
-			<div ref={mapRef} className="map-container" />
-			{popupVisible && (
-				<div
-					className="map-popup"
-					style={{ position: 'absolute', left: popupPosition.x, top: popupPosition.y }}
-				>
-					<CourseTable id={selectedRoom} courseDataProp={getCourseData(selectedRoom)} />
-				</div>
-			)}
-		</div>
-	);
+  return (
+    <div>
+      <div ref={mapRef} className="map-container" />
+      {(popupVisible) ? (
+        <div
+            className={"map-popup fadeIn"}>
+          <CourseTable id={selectedRoom} courseDataProp={getCourseData(selectedRoom)} />
+        </div>
+      ) : (
+        <div
+            className={"map-popup fadeOut"}>
+          <CourseTable id={selectedRoom} courseDataProp={getCourseData(selectedRoom)} />
+        </div>
+      )}
+    </div>
+  );
 }

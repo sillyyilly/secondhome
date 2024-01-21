@@ -54,7 +54,7 @@ export default function useMapView(
         };
 
         _mapView.addInteractivePolygonsForAllLocations();
-        _mapView.FloatingLabels.labelAllLocations({ interactive: true });
+        _mapView.FloatingLabels.labelAllLocations();
 
         const handlePolygonClick = ({ polygons, x, y }) => {
           _mapView.clearAllPolygonColors();

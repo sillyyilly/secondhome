@@ -4,8 +4,6 @@ import "../app/globals.css";
 import { useState } from "react";
 import { Button } from "./components/ui/button";
 
-
-
 export default function App() {
 	const [ mapHidden, setMapHidden ] = useState(true);
 
@@ -18,12 +16,9 @@ export default function App() {
 				<Button className="mt-4" onClick={() => setMapHidden(false)}>Explore</Button>
 			</div>
 
-			<div id="mapDiv" className={ mapHidden ? "opacity-0" : "opacity-100"}>
+			<div id="mapDiv" className={ mapHidden ? "opacity-0 absolute" : "opacity-100"}>
 				<Map />
 			</div>
 		</div>
 	);
 }
-// <div id="mapDiv" className={ mapHidden ? "opacity-0" : "opacity-100"}>
-// 	<Map />
-// </div>
