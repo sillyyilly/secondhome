@@ -37,31 +37,31 @@ export default function useMapView(
 						case "CPSC 330":
 							return "#e506da";
 						case "CPSC 340":
-							return "#f62b24";
+							return "#fd3732";
 						case "CPSC 313":
 							return "#0df54f";
 						default:
-							return "#063ae5"
+							return "#646464"
 					}
 				}
 
 				_mapView.addInteractivePolygonsForAllLocations();
-				// _mapView.FloatingLabels.labelAllLocations({ interactive: true });
+				_mapView.FloatingLabels.labelAllLocations({ interactive: true });
+				// clicking a room colours it in, clicking elsewhere de-colours all rooms
 				_mapView.on(E_SDK_EVENT.CLICK, ({ polygons }) => {
+					_mapView.clearAllPolygonColors();
 					if (polygons.length > 0 && polygons[0].externalId) {
 						_mapView.setPolygonColor(polygons[0], getColor(polygons[0].externalId));
-					} else {
-						_mapView.clearAllPolygonColors();
 					}
 				});
-
+				// clicking a label colours its indicated room, clicking elsewhere de-colours all rooms
 				_mapView.on(E_SDK_EVENT.CLICK, ({ floatingLabels }) => {
-					let polygon =
-						(floatingLabels[0].node) ? floatingLabels[0].node.polygon : undefined;
-					if (floatingLabels && floatingLabels.length > 0 && polygon && polygon.externalId) {
-						_mapView.setPolygonColor(polygon, getColor(polygon.externalId));
-					} else {
+					if (floatingLabels && floatingLabels.length > 0) {
+						let polygon = (floatingLabels[0].node) ? floatingLabels[0].node.polygon : undefined;
 						_mapView.clearAllPolygonColors();
+						if (polygon && polygon.externalId) {
+							_mapView.setPolygonColor(polygon, getColor(polygon.externalId));
+						}
 					}
 				});
 				setMapView(_mapView);

@@ -1,4 +1,4 @@
-import { MapView, Mappedin, TGetVenueMakerOptions, TMapViewOptions, showVenue } from "@mappedin/mappedin-js";
+import { Mappedin, TGetVenueMakerOptions } from "@mappedin/mappedin-js";
 import "@mappedin/mappedin-js/lib/mappedin.css";
 import "./Map.css";
 import useMapView from "./hooks/useMapView";
