@@ -20,12 +20,15 @@ export default function Map() {
   return (
     <div>
       <div ref={mapRef} className="map-container" />
-      {popupVisible && (
-        <div 
-          className="map-popup" 
-          style={{ position: 'absolute', left: popupPosition.x, top: popupPosition.y }}
-        >
-		{ selectedRoom }
+      {(popupVisible) ? (
+        <div
+            className={"map-popup fadeIn"}>
+          { selectedRoom }
+        </div>
+      ) : (
+        <div
+            className={"map-popup fadeOut"}>
+          { selectedRoom }
         </div>
       )}
     </div>
