@@ -1,26 +1,21 @@
-import { Mappedin, TGetVenueMakerOptions, getVenueMaker } from "@mappedin/mappedin-js";
-import { useState, useEffect } from "react";
+import { Mappedin, TGetVenueMakerOptions, TGetVenueOptions, getVenue, getVenueMaker } from "@mappedin/mappedin-js";
+import { useEffect, useState } from "react";
 
 export default function useVenue(options: TGetVenueMakerOptions) {
-  // Store the venue object in a state variable
   const [venue, setVenue] = useState<Mappedin | undefined>();
 
-  // Fetch data asynchronously whenever options are changed
   useEffect(() => {
     let ignore = false;
-    const fetchData = async () => {
+    async function fetchData() {
       try {
         const data = await getVenueMaker(options);
-        // Update state variable after data is fetched
         if (!ignore) {
           setVenue(data);
         }
       } catch (e) {
-        // Handle error
-        console.log(e);
         setVenue(undefined);
       }
-    };
+    }
     fetchData();
 
     return () => {
@@ -28,6 +23,6 @@ export default function useVenue(options: TGetVenueMakerOptions) {
     };
   }, [options]);
 
-  // Return the venue object
   return venue;
 }
+
