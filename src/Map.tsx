@@ -205,7 +205,7 @@ export default function Map() {
 		{(popupVisible && (
 		  <div
 		      className={"map-popup fadeIn"}>
-		    <CourseTable id={selectedRoom} courseDataProp={getCourseData(selectedRoom)} />
+		    <CourseTable id={selectedRoom} key={selectedRoom} courseDataProp={getCourseData(selectedRoom)} />
 		  </div>
 		))}
     </div>
