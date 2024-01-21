@@ -202,17 +202,12 @@ export default function Map() {
   return (
     <div>
       <div ref={mapRef} className="map-container" />
-      {(popupVisible) ? (
-        <div
-            className={"map-popup fadeIn"}>
-          <CourseTable id={selectedRoom} courseDataProp={getCourseData(selectedRoom)} />
-        </div>
-      ) : (
-        <div
-            className={"map-popup fadeOut"}>
-          <CourseTable id={selectedRoom} key={selectedRoom} courseDataProp={getCourseData(selectedRoom)} />
-        </div>
-      )}
+		{(popupVisible && (
+		  <div
+		      className={"map-popup fadeIn"}>
+		    <CourseTable id={selectedRoom} courseDataProp={getCourseData(selectedRoom)} />
+		  </div>
+		))}
     </div>
   );
 }
