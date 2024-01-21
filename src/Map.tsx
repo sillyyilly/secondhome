@@ -4,6 +4,7 @@ import "./Map.css";
 import useMapView from "./hooks/useMapView";
 import useVenue from "./hooks/useVenue";
 import { useRef } from "react";
+import CourseTable from "./components/CourseTable";
 
 const options: TGetVenueMakerOptions = {
   mapId: "65ac3a16ca641a9a1399dc24",
@@ -24,7 +25,7 @@ export default function Map() {
           className="map-popup" 
           style={{ position: 'absolute', left: popupPosition.x, top: popupPosition.y }}
         >
-          {selectedRoom}
+		{ selectedRoom }
         </div>
       )}
     </div>

@@ -7,7 +7,7 @@ type CourseTableProps = {
 }
 
 export default function CourseTable({ id }: CourseTableProps) {
-	id; // silence the warnings...
+	console.log("id passed to CourseTable: ", id)
 
 	const [courseData, setCourseData] = useState<CourseItem[]>([]);
 	const getCourseData = async () => {

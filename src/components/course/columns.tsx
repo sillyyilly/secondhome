@@ -37,7 +37,7 @@ export const columns: ColumnDef<CourseItem>[] = [
 						<SelectValue placeholder="Category" />
 					</SelectTrigger>
 					<SelectContent>
-					{ categories.map((cat) => <SelectItem value={cat}>{cat}</SelectItem> , row)}
+					{ categories.map((cat) => <SelectItem value={cat} key={cat}>{cat}</SelectItem> , row)}
 					</SelectContent>
 				</Select>
 			)
