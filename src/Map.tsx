@@ -14,7 +14,7 @@ const options: TGetVenueMakerOptions = {
 export default function Map() {
   const mapRef = useRef<HTMLDivElement|null>(null);
   const venue: Mappedin | undefined = useVenue(options);
-  const { mapView, popupVisible, popupPosition } = useMapView(mapRef.current, venue);
+  const { mapView, popupVisible, popupPosition, selectedRoom } = useMapView(mapRef.current, venue);
 
   return (
     <div>
@@ -24,7 +24,7 @@ export default function Map() {
           className="map-popup" 
           style={{ position: 'absolute', left: popupPosition.x, top: popupPosition.y }}
         >
-          Hello World
+          {selectedRoom}
         </div>
       )}
     </div>
