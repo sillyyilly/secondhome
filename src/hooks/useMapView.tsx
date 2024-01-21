@@ -46,7 +46,7 @@ export default function useMapView(
 				}
 
 				_mapView.addInteractivePolygonsForAllLocations();
-				_mapView.FloatingLabels.labelAllLocations({ interactive: true });
+				// _mapView.FloatingLabels.labelAllLocations({ interactive: true });
 				_mapView.on(E_SDK_EVENT.CLICK, ({ polygons }) => {
 					if (polygons.length > 0 && polygons[0].externalId) {
 						_mapView.setPolygonColor(polygons[0], getColor(polygons[0].externalId));
