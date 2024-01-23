@@ -8,6 +8,6 @@ Every individual is unique, down to the way they like to organize and keep track
 
 Users can build a custom floor plan and populate each floor and its rooms with different tasks in their life.
 
-![SH1](https://github.com/sillyyilly/secondhome/assets/82855300/abb62328-a64c-453e-94ca-13ba85d8b25a)
+![SH1](https://github.com/sillyyilly/secondhome/assets/82855300/b48b1092-5d3c-48f9-84bf-ee347054e5d8)
 ![SH2](https://github.com/sillyyilly/secondhome/assets/82855300/85d6c374-68c0-4516-9bb2-3a23ae8e23bb)
 ![SH3](https://github.com/sillyyilly/secondhome/assets/82855300/a4d5e769-63ba-4861-83b2-a99779751217)
