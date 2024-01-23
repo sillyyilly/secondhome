@@ -2,7 +2,7 @@
 
 ## Inspiration
 
-Every individual is unique, down to the way they like to organize and keep track of their busy life. We saw an opportunity to use Mappedin to provide a novel way to use indoor mapping to allow users to visualize their tasks and responsibilities. Each floor represents a broad category (school, work, personal, etc) and users are able to customize each floor down to the quantity and names of the rooms using Mappedin’s Maker interface. This allows users to use a familiar interface of maps for a completely new function of personal organization.
+Every individual is unique, down to the way they like to organize and keep track of their busy life. We saw an opportunity to use Mappedin's SDK to provide a novel way to use indoor mapping to allow users to visualize their tasks and responsibilities. Each floor represents a broad category (school, work, personal, etc) and users are able to customize each floor down to the quantity and names of the rooms using Mappedin’s Maker interface. This allows users to use a familiar interface of maps for a completely new function of personal organization.
 
 ## What it does
 
